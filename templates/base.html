@@ -1,0 +1,37 @@
+
+<!doctype html>
+<html lang="en">
+    <head>
+        {% block head %}
+
+            <meta charset="utf-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+            
+            {% block styles %}
+                <!-- Bootstrap CSS -->
+                
+            {% endblock %}
+
+            <title>
+                
+                {%block title%}
+                    IngEd | {{context}}
+                {%endblock%}
+
+            </title>
+        {% endblock %}
+    </head>
+    <body>
+        {% block navbar %}   
+        {% endblock %}
+            
+        {% block content %}
+        {% endblock %}
+
+        {% block scripts %}
+            <!-- Optional JavaScript -->
+            
+        {% endblock %}
+    
+    </body>
+</html>
