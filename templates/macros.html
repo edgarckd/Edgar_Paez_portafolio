@@ -2,19 +2,24 @@
 {% macro navbar() %}
 {% from 'bootstrap5/nav.html' import render_nav_item %}
 
-<nav class="navbar navbar-default navegacion">
+<nav class="navbar navbar-default navegacion ">
   <div class="container-fluid">
-    <div class="navbar-header">
+    <div class="navbar-header imagen_circular_nav ">
       <a class="navbar-brand" href="{{url_for('home')}}">
-        <img alt="Brand" src="{{url_for('static', filename='images/ingenieria-automatizada.png')}}">
+        <img alt="Brand" src="{{url_for('static', filename='images/pcb_2.jpg')}}">
       </a> 
     </div>
-    <div>{{ render_nav_item("home", "Home") }}</div>
-    <div>{{ render_nav_item("services", "Servicios") }}</div>
-    <div>{{ render_nav_item("proyects", "Proyectos") }}</div>
-    <div>{{ render_nav_item("mensajes", "Contactame") }}</div>
+    <div class=" div_internos_nav">{{ render_nav_item("home", "Home") }}</div>
+    <div class=" div_internos_nav">{{ render_nav_item("services", "Servicios") }}</div>
+    <div class=" div_internos_nav">{{ render_nav_item("proyects", "Proyectos") }}</div>
+    <div class=" div_internos_nav">{{ render_nav_item("mensajes", "Contactame") }}</div>
   </div>
 </nav>
   
 {% endmacro %}
 
+{% macro ante_nav(args) %}
+{% from 'bootstrap5/nav.html' import render_nav_item %}
+  <div class="navbar navbar-dark bg-dark ante_nav">
+  </div>
+{% endmacro %}
