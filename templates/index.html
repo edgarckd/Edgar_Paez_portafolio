@@ -2,13 +2,11 @@
 {% import 'macros.html' as macro  %}
 
 {% block navbar %}
-    <h1>este es la barra de navegacion</h1>
     {{ macro.navbar() }}
 
 {% endblock %}
 
 {% block content %}
     <h1> Este es el contenido</h1>
-    <link rel="stylesheet" href="{{url_for('static', filename='css/main.css')}}">
     <img src="{{ url_for('static', filename='images/ingenieria-automatizada.png')}}" >
 {% endblock %}

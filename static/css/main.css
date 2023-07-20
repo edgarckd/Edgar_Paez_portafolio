@@ -3,3 +3,12 @@ img{
 
 
 }
+
+.container {
+    width: 100%;
+    text-align: center; /* Centrar los elementos horizontalmente (opcional) */
+  }
+
+.navegacion{
+    background-color: blue;
+}

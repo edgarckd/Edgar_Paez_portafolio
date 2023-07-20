@@ -1,14 +1,20 @@
 
 {% macro navbar() %}
-<ul >
-  <li role="presentation" class="dropdown">
-    <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
-      Dropdown <span class="caret"></span>
-    </a>
-    <ul class="dropdown-menu">
-    </ul>
-  </li>
-</ul>
+{% from 'bootstrap5/nav.html' import render_nav_item %}
+
+<nav class="navbar navbar-default navegacion">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="{{url_for('home')}}">
+        <img alt="Brand" src="{{url_for('static', filename='images/ingenieria-automatizada.png')}}">
+      </a> 
+    </div>
+    <div>{{ render_nav_item("home", "Home") }}</div>
+    <div>{{ render_nav_item("services", "Servicios") }}</div>
+    <div>{{ render_nav_item("proyects", "Proyectos") }}</div>
+    <div>{{ render_nav_item("mensajes", "Contactame") }}</div>
+  </div>
+</nav>
   
-{% endmacro %} navbar %}
+{% endmacro %}
 
